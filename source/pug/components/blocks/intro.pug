@@ -3,8 +3,14 @@ mixin intro()
     //- вставлять блоки во внешний контейнер неверно
     //- все блоки содержат в себе container без доп класса tutorial__wrapper
     .container
-      p(style="margin-top: 40px;") Текст&nbsp;с&nbsp;мнемониками
+      .intro__text
+        h1.title.title--h1.intro__title Эксклюзивная и нестандартная мебель для дома
+        a(href="#" class="intro__link order-link" onclick="openPopup(); return false;") Заказать проект
 
-      p(style="margin-top: 40px;") Пример использования +img()
-      p(style="margin-bottom: 40px;")
-        +img("content", "placeholder", "png", 120, 120, "Пример")
+        p.intro__paragraph Мы можем произвести любую мебель для вашего проекта и найти производственное решение любой задумки.
+
+      .intro__images
+          //- p(style="margin-top: 40px;") Пример использования +img()
+          //- p(style="margin-bottom: 40px;")
+          +img("content", "michael-oxendine-unsplash-left", "png", 329, 493, "Пример")
+          +img("content", "spacejoy-unsplash-right", "png", 678, 879, "Пример")

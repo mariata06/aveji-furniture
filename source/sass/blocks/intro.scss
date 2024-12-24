@@ -1,0 +1,50 @@
+.intro {
+  min-height: 1107px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+
+  &__text {
+    // position: absolute;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    width: 794px;
+  }
+
+  &__paragraph {
+    font-size: 20px;
+    line-height: 28px;
+    width: 445px;
+    flex-basis: 100%;
+    padding-right: 70%;
+  }
+
+  img:first-child {
+    margin-top: auto;
+  }
+
+  &__images {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    text-decoration: underline;
+    font-size: 18px;
+    line-height: 21.09px;
+    // width: 30%;
+    margin-left: auto;
+    flex: 1;
+    margin-bottom: 40px;
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+  }
+}

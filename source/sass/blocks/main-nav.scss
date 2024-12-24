@@ -1,4 +1,7 @@
 .main-nav {
+  width: 445px;
+  margin-left: auto;
+
   &__list {
     display: flex;
     margin: 0;
@@ -7,6 +10,7 @@
     padding: 0;
 
     list-style: none;
+    flex-direction: column;
   }
 
   &__item {
@@ -15,6 +19,7 @@
 
   &__link {
     color: $color-default-white;
+    color: $color-default-black;
 
     &.is-active {
       opacity: 0.6;
@@ -23,5 +28,12 @@
 
   &__toggle {
     display: none;
+  }
+
+  &__item--phone {
+    margin-left: auto;
+    /* Переместить телефон вправо */
+    align-self: flex-start;
+    /* Совместить телефон по верхнему краю списка */
   }
 }
