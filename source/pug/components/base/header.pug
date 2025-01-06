@@ -1,6 +1,6 @@
 mixin header(headerMods, currentUrl)
   -
-    const headerLinks = [
+    const navLinks = [
       {
         href: "index.html",
         text: "О нас"
@@ -17,6 +17,11 @@ mixin header(headerMods, currentUrl)
         href: "#",
         text: "Отзывы"
       },
+
+    ]
+
+  -
+    const contactLinks = [
       {
         href: "tel:+79999999999",
         text: "+7 999 999 99 99"
@@ -37,9 +42,13 @@ mixin header(headerMods, currentUrl)
           +icon("icon-burger", 20, 20)
         .main-nav__wrapper
           ul.main-nav__list
-            each link, index in headerLinks
-              li.main-nav__item(class=(index === headerLinks.length - 1 ? 'main-nav__item--phone' : ''))
+            each link, index in navLinks
+              li.main-nav__item
                 if currentUrl === link.href
                   span.main-nav__link.is-active= link.text
                 else
                   a.main-nav__link(href=link.href)= link.text
+          ul.main-nav__list.main-nav__list--contacts
+            each link, index in contactLinks
+              li.main-nav__item
+                a.main-nav__link(href=link.href)= link.text

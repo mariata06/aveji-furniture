@@ -8,6 +8,7 @@
     margin-right: 20px;
     margin-left: 60px;
     padding: 0;
+    margin: 0;
 
     list-style: none;
     flex-direction: column;
@@ -35,5 +36,11 @@
     /* Переместить телефон вправо */
     align-self: flex-start;
     /* Совместить телефон по верхнему краю списка */
+  }
+
+  &__wrapper {
+    display: flex;
+    width: 450px;
+    justify-content: space-between;
   }
 }

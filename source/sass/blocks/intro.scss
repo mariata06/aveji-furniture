@@ -24,7 +24,9 @@
     line-height: 28px;
     width: 445px;
     flex-basis: 100%;
-    padding-right: 70%;
+    // padding-right: 70%;
+    margin: 0;
+    margin-bottom: 20px;
   }
 
   img:first-child {
@@ -34,6 +36,11 @@
   &__images {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__images--left {
+    display: flex;
+    flex-direction: column;
   }
 
   &__link {

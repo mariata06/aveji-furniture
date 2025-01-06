@@ -1,0 +1,29 @@
+mixin cta-block()
+  .cta-block
+    .container
+      .cta-block__img
+        +img("content", "img-room", "png", "Пример проекта")
+      .cta-block__form
+        h2.title.title--h1.cta-block__title Эксклюзивная и нестандартная мебель для дома
+        p.cta-block__paragraph Оставьте заявку, и мы вам перезвоним
+        form(action="")
+          input(type="text" name="name")
+          input(type="text" name="surname")
+          input(type="tel" name="tel")
+          button(type="submit")
+
+        .cta-block__download-buttons
+          a.cta-block__download-btn.btn.btn--app-store(
+            href="https://apps.apple.com/app/yourapp"
+            target="_blank"
+            rel="noopener noreferrer"
+          )
+            img(src="path/to/app-store-icon.png" alt="Скачать в App Store")
+            | App Store
+          a.cta-block__download-btn.btn.btn--google-play(
+            href="https://play.google.com/store/apps/details?id=yourapp"
+            target="_blank"
+            rel="noopener noreferrer"
+          )
+            img(src="path/to/google-play-icon.png" alt="Скачать в Google Play")
+            | Google Play

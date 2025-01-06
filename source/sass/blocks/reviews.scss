@@ -1,0 +1,26 @@
+.reviews {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__item {
+    padding: 40px;
+    border: 1px solid $color-default-black;
+    text-align: center;
+  }
+
+  &__item-title {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(445px, 1fr));
+    gap: 20px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 32px;
+  }
+}
