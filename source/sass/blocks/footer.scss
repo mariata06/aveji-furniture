@@ -1,5 +1,40 @@
 .footer {
   padding: 40px 0;
+  padding-top: 60px;
+  padding-bottom: 16px;
 
   background-color: $color-neon-blue;
+  background-color: $color-default-white;
+
+  color: #212529;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .footer__copyright {
+      margin-right: 280px;
+      font-size: 18px;
+      line-height: 21.09px;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer__policy {
+      margin-right: 256px;
+      font-size: 16px;
+      line-height: 22.4px;
+    }
+
+    .footer__links {
+      font-size: 18px;
+      line-height: 21.09px;
+      text-transform: uppercase;
+      width: 235px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
