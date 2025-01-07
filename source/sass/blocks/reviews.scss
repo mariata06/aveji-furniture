@@ -14,13 +14,27 @@
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(445px, 1fr));
-    gap: 20px;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(445px, 1fr));
+    // gap: 20px;
   }
 
   &__title {
     margin: 0;
     margin-bottom: 32px;
+  }
+
+  .swiper-container {
+    width: 100%;
+    // height: 300px;
+    /* Высота слайдера */
+    margin: 0 auto;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    max-width: 445px;
+    min-height: 300px;
   }
 }

@@ -33,6 +33,8 @@ body {
   height: 100%;
 
   background-color: $color-default-white;
+  scroll-behavior: smooth;
+    /* Встроенный плавный скролл */
 }
 
 a {

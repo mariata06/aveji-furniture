@@ -1,5 +1,5 @@
 mixin cta-block()
-  .cta-block
+  section.cta-block(id="cta-block")
     .container
       .cta-block__img
         +img("content", "img-room", "png", 562, 566, "Пример проекта")
@@ -7,9 +7,9 @@ mixin cta-block()
         h2.title.title--h2.cta-block__title Хотите заказать проект?
         p.cta-block__paragraph Оставьте заявку, и мы вам перезвоним
         form(action="")
-          input(type="text" name="name" placeholder="Имя")
-          input(type="text" name="surname" placeholder="E-mail")
-          input(type="tel" name="tel" placeholder="Телефон")
+          input(type="text" name="name" placeholder="Имя" required)
+          input(type="text" name="surname" placeholder="E-mail" required)
+          input(type="tel" name="tel" placeholder="Телефон" required)
           button(type="submit" class="btn btn--black-bg") Отправить заявку
 
         .cta-block__download-buttons

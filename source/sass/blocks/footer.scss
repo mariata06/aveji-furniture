@@ -23,9 +23,10 @@
     }
 
     .footer__policy {
-      margin-right: 256px;
+      margin-right: auto;
       font-size: 16px;
       line-height: 22.4px;
+      min-width: 397px;
     }
 
     .footer__links {
@@ -35,6 +36,42 @@
       width: 235px;
       display: flex;
       justify-content: space-between;
+    }
+
+    .footer__policy,
+    .footer__links {
+      a {
+        text-decoration: none;
+        color: black;
+        position: relative;
+        padding: 5px 0 0;
+      }
+
+      a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        /* Линия располагается под текстом */
+        width: 100%;
+        /* Линия изначально есть, но её не видно из-за scale */
+        height: 1px;
+        /* Толщина линии */
+        background: black;
+        /* Цвет линии */
+        transform: scaleX(0);
+        /* Линия "сжата" */
+        transform-origin: right bottom;
+        /* Начало трансформации слева */
+        transition: transform 0.3s ease-in-out;
+      }
+
+      a:hover::after {
+        transform: scaleX(1);
+        /* Линия "разворачивается" */
+        /* Расширяем линию при наведении */
+        transform-origin: left bottom;
+      }
     }
   }
 }

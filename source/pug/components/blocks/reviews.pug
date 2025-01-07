@@ -1,19 +1,31 @@
 mixin reviews()
-  .reviews
+  section.reviews(id="reviews")
     .container
       .reviews__text
         h2.title.title--h2.reviews__title Отзывы
-      .reviews__wrapper
-        .reviews__list
-          .reviews__item
+      .reviews__wrapper.swiper-container
+        .reviews__list.swiper-wrapper
+          .reviews__item.swiper-slide
             +icon("icon-quotes", 40, 40)
             h4.title.title--h4.reviews__item-title Игорь Антонов
             span.reviews__item-desc Обратилась к Aveji по рекомендации. Команда сразу поняла, какой дизайн я хочу. Предоставили несколько вариантов и в течение недели сделали наброски. Итог понравился, все на высшем уровне.
-          .reviews__item
+          .reviews__item.swiper-slide
             +icon("icon-quotes", 40, 40)
             h4.title.title--h4.reviews__item-title Ольга Иванова
             span.reviews__item-desc После пары заказов у компании Aveji убедилась, что за мебелью теперь только к ним. Абсолютно любые решения, в любых размерах и форм-факторе, то что нужно!
-          .reviews__item
+          .reviews__item.swiper-slide
             +icon("icon-quotes", 40, 40)
             h4.title.title--h4.reviews__item-title Аркадий Макаров
             span.reviews__item-desc Aveji — настоящие профессионалы своего дела. Быстро поняли мою задумку, сделали дизайн, согласовали и изготовили мебель. А потом еще и бесплатно все собрали на месте. Большое спасибо!
+          .reviews__item.swiper-slide
+            +icon("icon-quotes", 40, 40)
+            h4.title.title--h4.reviews__item-title Денис Белкин
+            span.reviews__item-desc Очень понравился дизайн и проект, качественно сделано. Понравился сервис и поддержка клиентов.
+          .reviews__item.swiper-slide
+            +icon("icon-quotes", 40, 40)
+            h4.title.title--h4.reviews__item-title Катя Иванова
+            span.reviews__item-desc Цена соответствует качеству работы. Ребята молодцы. Буду всем рекомендовать и заказывать снова.
+          .reviews__item.swiper-slide
+            +icon("icon-quotes", 40, 40)
+            h4.title.title--h4.reviews__item-title Иван Демидов
+            span.reviews__item-desc Aveji — Качество на высоте, спасибо за отличную работу! Быстрая все доставили и собрали!
