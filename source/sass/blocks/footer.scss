@@ -12,6 +12,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    align-items: center;
+
+    @media (max-width: 767px) {
+      flex-direction: column-reverse;
+    }
 
     .footer__copyright {
       margin-right: 280px;
@@ -20,6 +25,10 @@
       text-transform: uppercase;
       display: flex;
       flex-direction: column;
+
+      @media (max-width: 767px) {
+        text-align: center;
+      }
     }
 
     .footer__policy {
@@ -71,6 +80,13 @@
         /* Линия "разворачивается" */
         /* Расширяем линию при наведении */
         transform-origin: left bottom;
+      }
+    }
+
+    .footer__copyright,
+    .footer__policy {
+      @media (max-width: 767px) {
+        margin: 0 auto;
       }
     }
   }

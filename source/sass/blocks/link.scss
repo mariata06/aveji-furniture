@@ -1,0 +1,62 @@
+.link {
+  color: #212529;
+  transition: all 0.3s ease-out;
+  position: relative;
+  align-self: end;
+  justify-self: end;
+  justify-content: end;
+
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* Линия располагается под текстом */
+    width: 100%;
+    /* Линия изначально есть, но её не видно из-за scale */
+    height: 1px;
+    /* Толщина линии */
+    background: black;
+    /* Цвет линии */
+    transform: scaleX(1);
+    /* Линия "сжата" */
+    transform-origin: right bottom;
+    /* Начало трансформации слева */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover {
+
+    &::after {
+      background: #DDD7C0;
+    }
+  }
+
+  &:active {
+    color: #CBC6B2;
+
+    &::after {
+      background: #CBC6B2;
+    }
+  }
+}
+
+.intro__link.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  transform: scaleX(1);
+  transform-origin: right bottom;
+  transition: transform .3s ease-in-out;
+}
+
+.intro__link.link:hover::after {
+  background: transparent;
+  transform: scaleX(0);
+  transform-origin: left bottom;
+}

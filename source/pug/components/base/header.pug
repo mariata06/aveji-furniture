@@ -40,6 +40,9 @@ mixin header(headerMods, currentUrl)
       nav.main-nav
         button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
           +icon("icon-burger", 20, 20)
+          span
+          span
+          span
         .main-nav__wrapper
           ul.main-nav__list
             each link, index in navLinks
@@ -50,5 +53,5 @@ mixin header(headerMods, currentUrl)
                   a.main-nav__link(href=link.href)= link.text
           ul.main-nav__list.main-nav__list--contacts
             each link, index in contactLinks
-              li.main-nav__item
-                a.main-nav__link(href=link.href)= link.text
+              li.main-nav__item.main-nav__item--tel
+                a.main-nav__link.link.link--tel(href=link.href)= link.text

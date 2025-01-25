@@ -4,7 +4,9 @@ import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {smoothScroll} from './modules/smooth-scroll';
-import {reviewSlider} from './modules/init-review-slider';
+import {slider} from './modules/init-review-slider';
+import {initHorizontalFade} from './modules/init-show-review';
+
 
 // ---------------------------------
 
@@ -30,7 +32,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
-    reviewSlider();
+    slider();
+    initHorizontalFade('.reviews__list', '.reviews__wrapper');
   });
 });
 

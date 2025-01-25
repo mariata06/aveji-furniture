@@ -2,6 +2,10 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
+  @media (max-width: 767px) {
+    display: none;
+  }
+
   &__item {
     padding: 40px;
     border: 1px solid $color-default-black;
@@ -17,6 +21,28 @@
     // display: grid;
     // grid-template-columns: repeat(auto-fill, minmax(445px, 1fr));
     // gap: 20px;
+    overflow-x: auto;
+    gap: 21px;
+    cursor: grab;
+    display: flex;
+  }
+
+  &__list {
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Для Firefox */
+    user-select: none;
+    position: relative;
+    // background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1) 95%);
+  }
+
+  &__list::-webkit-scrollbar {
+    display: none;
+    /* Для Webkit-браузеров */
+  }
+
+  &__list:active {
+    cursor: grabbing;
   }
 
   &__title {
@@ -29,12 +55,76 @@
     // height: 300px;
     /* Высота слайдера */
     margin: 0 auto;
-    display: flex;
+    max-width: 1440px;
+    // display: flex;
     overflow: hidden;
+    // position: relative;
+  }
+
+  .reviews__wrapper {
+    position: relative;
+  }
+
+  .reviews__wrapper::after {
+    content: '';
+    position: absolute;
+    /* Фиксированное положение относительно экрана */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 10%;
+    /* Ширина туманного эффекта */
+    pointer-events: none;
+    /* Чтобы не мешать взаимодействию */
+    z-index: 1;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    opacity: 1;
+    /* Видимый по умолчанию */
+    transition: opacity 0.3s ease;
+    /* Плавное исчезновение */
+    // border: 1px solid green;
+  }
+
+  .reviews__wrapper::before {
+    content: '';
+    position: absolute;
+    /* Фиксированное положение относительно экрана */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 10%;
+    /* Ширина туманного эффекта */
+    pointer-events: none;
+    /* Чтобы не мешать взаимодействию */
+    z-index: 10;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    // background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    opacity: 0;
+    /* Видимый по умолчанию */
+    transition: opacity 0.3s ease;
+    /* Плавное исчезновение */
+    // border: 1px solid green;
+  }
+
+  .reviews__wrapper.fade-right::after {
+    opacity: 0;
+  }
+
+  .reviews__wrapper.fade-left::before {
+    opacity: 1;
+  }
+
+  .swiper-wrapper {
+    display: flex;
   }
 
   .swiper-slide {
-    max-width: 445px;
+    max-width: 444px;
     min-height: 300px;
+
+    @media (max-width: 1439px) {
+      width: 30%;
+      min-height: 320px;
+    }
   }
 }

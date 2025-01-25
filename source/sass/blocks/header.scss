@@ -6,11 +6,24 @@
 
   .container {
     display: flex;
+
+    @media (max-width: 767px) {
+      align-items: center;
+    }
   }
 
   &__logo {
     color: $color-default-white;
+
+    @media (max-width: 767px) {
+      svg {
+        width: 39px;
+        height: 42px;
+      }
+    }
   }
 
-  
+  @media (max-width: 767px) {
+    padding: 8px 0 20px;
+  }
 }

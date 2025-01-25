@@ -4,7 +4,7 @@ mixin reviews()
       .reviews__text
         h2.title.title--h2.reviews__title Отзывы
       .reviews__wrapper.swiper-container
-        .reviews__list.swiper-wrapper
+        .reviews__list.fade-right.fade-left.swiper-wrapper(id="slider")
           .reviews__item.swiper-slide
             +icon("icon-quotes", 40, 40)
             h4.title.title--h4.reviews__item-title Игорь Антонов

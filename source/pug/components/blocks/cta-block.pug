@@ -8,6 +8,7 @@ mixin cta-block()
         p.cta-block__paragraph Оставьте заявку, и мы вам перезвоним
         form(action="")
           input(type="text" name="name" placeholder="Имя" required)
+          //- label(for="name") Имя
           input(type="text" name="surname" placeholder="E-mail" required)
           input(type="tel" name="tel" placeholder="Телефон" required)
           button(type="submit" class="btn btn--black-bg") Отправить заявку

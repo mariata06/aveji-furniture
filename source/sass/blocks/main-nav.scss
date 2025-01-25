@@ -2,6 +2,10 @@
   width: 445px;
   margin-left: auto;
 
+  @media (max-width: 767px) {
+    width: unset;
+  }
+
   &__list {
     display: flex;
     margin: 0;
@@ -9,29 +13,123 @@
     margin-left: 60px;
     padding: 0;
     margin: 0;
-
     list-style: none;
     flex-direction: column;
   }
 
+  &__list:last-child .main-nav__item {
+    margin-right: 0;
+  }
+
   &__item {
     margin-right: 20px;
+    margin-bottom: 10px;
   }
 
   &__link {
     color: $color-default-white;
     color: $color-default-black;
+    font-size: 18px;
+    line-height: 21.09px;
+    position: relative;
 
     &.is-active {
       opacity: 0.6;
     }
   }
 
-  &__toggle {
-    display: none;
+  &__link {
+    text-decoration: none;
+    // position: static;
   }
 
-  &__item--phone {
+  &__link.link:hover {
+    // color: unset;
+    // position: relative;
+  }
+
+  &__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #000;
+    transform: scaleX(0);
+    transform-origin: right bottom;
+    transition: transform .3s ease-in-out;
+  }
+
+  &__link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left bottom;
+  }
+
+  &__link.link--tel {
+    text-decoration: none;
+    position: static;
+  }
+
+  &__link.link--tel:hover {
+    color: unset;
+    position: static;
+  }
+
+  &__toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    min-height: 39px;
+    min-width: 39px;
+    border-radius: 100px;
+    position: fixed;
+    right: calc(16px - 5px);
+    top: 16px;
+    z-index: 100;
+    background-color: $color-default-white;
+
+    .fixed {
+      background-color: $color-default-white;
+    }
+
+    .open span {
+      // position: relative;
+      display: block;
+      width: 100%;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      height: 0.063rem;
+      background: #212529;
+    }
+
+    .open span:first-child {
+      top: unset;
+      transform: rotate(45deg);
+    }
+
+    .open span:nth-child(2) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .close {
+
+    }
+
+    @media (max-width: 767px) {
+      display: block;
+    }
+
+    svg {
+      width: 24px;
+      height: 12px;
+    }
+  }
+
+  &__item--tel {
     margin-left: auto;
     /* Переместить телефон вправо */
     align-self: flex-start;
@@ -42,5 +140,9 @@
     display: flex;
     width: 450px;
     justify-content: space-between;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 }

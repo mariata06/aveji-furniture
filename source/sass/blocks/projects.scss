@@ -1,10 +1,31 @@
 .projects {
   padding-top: 60px;
   padding-bottom: 60px;
+
   &__images {
     display: grid;
     grid-template-columns: repeat(auto-fill, 445px);
     gap: 20px;
+
+    @media (max-width: 1439px) {
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+    }
+
+    @media (max-width: 767px) {
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      // width: ;
+    }
+  }
+
+  .container {
+    @media (max-width: 767px) {
+      width: auto;
+      margin-left: 16px;
+      padding: 0;
+    }
   }
 
   &__item {
@@ -18,12 +39,16 @@
       object-fit: cover;
       transition: transform 0.4s ease;
     }
+
+    @media (max-width: 767px) {
+      width: 70%;
+      min-width: 70%;
+    }
   }
 
   &__item:hover {
     .projects__item-label {
       bottom: 0;
-
     }
 
     img {
