@@ -6,7 +6,8 @@ import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {smoothScroll} from './modules/smooth-scroll';
 import {slider} from './modules/init-review-slider';
 import {initHorizontalFade} from './modules/init-show-review';
-
+import {validateForm} from './modules/init-validate-form-order';
+import {mobMenu} from './modules/init-mobile-menu';
 
 // ---------------------------------
 
@@ -34,6 +35,8 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     slider();
     initHorizontalFade('.reviews__list', '.reviews__wrapper');
+    validateForm();
+    mobMenu();
   });
 });
 

@@ -28,6 +28,18 @@ mixin header(headerMods, currentUrl)
       },
     ]
 
+  -
+    const socialLinks = [
+      {
+        href: "#",
+        text: "Вконтакте"
+      },
+      {
+        href: "#",
+        text: "Телеграм"
+      },
+    ]
+
   header.header(class=headerMods)
     .container
       if(currentUrl === "index.html")
@@ -37,21 +49,28 @@ mixin header(headerMods, currentUrl)
       else
         a.header__logo(href="index.html", aria-label="Переход на главную")
           +icon("logo", 70, 75)
+      button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+        +icon("icon-burger", 20, 20)
+        //- span
+        //- span
       nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-          span
-          span
-          span
-        .main-nav__wrapper
-          ul.main-nav__list
-            each link, index in navLinks
-              li.main-nav__item
-                if currentUrl === link.href
-                  span.main-nav__link.is-active= link.text
-                else
+        .main-nav__content
+          .main-nav__logo(href="index.html", aria-label="Переход на главную")
+            +icon("logo", 70, 75)
+
+          .main-nav__wrapper
+            ul.main-nav__list
+              each link, index in navLinks
+                li.main-nav__item
+                  if currentUrl === link.href
+                    span.main-nav__link.is-active= link.text
+                  else
+                    a.main-nav__link(href=link.href)= link.text
+            ul.main-nav__list.main-nav__list--contacts
+              each link, index in contactLinks
+                li.main-nav__item.main-nav__item--tel
+                  a.main-nav__link.link.link--tel(href=link.href)= link.text
+            ul.main-nav__list.main-nav__list--social
+              each link, index in socialLinks
+                li.main-nav__item
                   a.main-nav__link(href=link.href)= link.text
-          ul.main-nav__list.main-nav__list--contacts
-            each link, index in contactLinks
-              li.main-nav__item.main-nav__item--tel
-                a.main-nav__link.link.link--tel(href=link.href)= link.text

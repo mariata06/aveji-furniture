@@ -6,12 +6,13 @@ export const smoothScroll = () => {
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
 
-        // Скроллим к элементу
-        window.scrollTo({
-          // top: targetElement.offsetTop - 60, // Учитываем высоту фиксированного меню
-          top: targetElement.offsetTop, // Учитываем высоту фиксированного меню
-          behavior: 'smooth',
-        });
+        // Проверяем, существует ли элемент, перед скроллом
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop, // Учитываем высоту фиксированного меню
+            behavior: 'smooth',
+          });
+        }
       });
     });
   }

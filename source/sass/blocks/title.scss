@@ -6,6 +6,11 @@
     text-transform: uppercase;
     font-weight: 400;
 
+    @media (max-width: 1139px) {
+      font-size: 60px;
+      line-height: 70px;
+    }
+
     @media (max-width: 767px) {
       font-size: 32px;
       line-height: 38.4px;
@@ -19,6 +24,11 @@
     line-height: 66.24px;
     font-weight: 400;
 
+    @media (max-width: 1139px) {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
     @media (max-width: 767px) {
       font-size: 28px;
       line-height: 38.64px;
@@ -29,6 +39,11 @@
     font-size: 36px;
     line-height: 49.68px;
     font-weight: 400;
+
+    @media (max-width: 1139px) {
+      font-size: 30px;
+      line-height: 40px;
+    }
 
     @media (max-width: 767px) {
       font-size: 24px;

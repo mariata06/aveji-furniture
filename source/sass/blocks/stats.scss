@@ -15,6 +15,10 @@
       width: 100%;
       min-width: unset;
     }
+
+    @media (max-width: 1139px) {
+      width: 50%;
+    }
   }
 
   .container {
@@ -30,6 +34,11 @@
     padding-right: 135px;
     font-weight: 400;
     margin-bottom: 20px;
+
+    @media (max-width: 1139px) {
+      width: 50%;
+      padding-right: 30px;
+    }
   }
 
   &__title-span--desktop {
